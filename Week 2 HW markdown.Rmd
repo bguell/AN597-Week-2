@@ -5,9 +5,8 @@ date: "9/12/2017"
 output: html_document
 ---
 
-
 ##Challenge 1
-install.packages("stringr")
+```{r}
 library(stringr)
 
 #the hard way... lol
@@ -20,19 +19,19 @@ v2=unlist(v[seq(from = 1, to = 23, by=3)])
 
 #now call every 3rd word from 1-23 word
 v3=v2[seq(from=1, to=23, by =3)]
-
 v3
 
 #or by hand... cheap way LOL
-
 v= c("Stately", "plump", "Buck", "Mulligan", "came", "from", "the", "stairhead", "bearing", "a", "bowl", "of", "later", "on", "which", "a", "mirror", "and", "a", "razor", "lay", "crossed")
 
 thirdelement=v[c(3,6,9,12,15,18,21)]
 thirdelement
 
 
-##Challenge 2
+```
 
+##Challenge 2
+```{r}
 m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 
 x=c(m[,2],m[,3],m[,6])
@@ -45,8 +44,10 @@ x
 x=c(m[2,],m[,2:6],m[,9])
 x
 
-##Challenge 3
+```
 
+##Challenge 3
+```{r}
 a <- array(data = 400:1, dim = c(5, 5, 4, 4))
 a
 
@@ -56,17 +57,11 @@ a[2,3,2,]
 
 a[1:5,1:5,3,3]
 
+```
+
+
 ##Challenge 4
-
-
-x=list("Primates",list("Haplorhini",list("Anthropoidea",
-                                         list("Platyrrhini", list("Cebidae", "Atelidae", "Pitheciidae")),
-                                               "Catarrhini", list("Cercopithecidae", "Hylobatidae", "Hominidae")),
-                                         "Tarsioidea",list("Tarsiidae")),
-                       "Strepsirhini",list("Lorisoidea",list("Lorisidae", "Galagidae"),
-                                           "Lemuroidea",list("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")))
-
-x
+```{r}
 
 Platyrrhini=list("Cebidae", "Atelidae", "Pitheciidae")
 Catarrhini=list("Cercopithecidae", "Hylobatidae", "Hominidae")
@@ -88,8 +83,10 @@ Primates
 #use names function to give names to the things inside of the list that you made.... so that then it give you $ of each list...
 
 
+```
 
 #Challenge 5
+```{r}
 
 matrix1=matrix(data=c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow=TRUE)
 
@@ -99,5 +96,5 @@ df$X2=as.logical(df$X2)
 df$X3=as.factor(df$X3)
 df
 str(df)
+```
 
-hello
