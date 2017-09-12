@@ -6,7 +6,7 @@ output: html_document
 ---
 
 
-#Challenge 1
+##Challenge 1
 install.packages("stringr")
 library(stringr)
 
@@ -31,7 +31,7 @@ thirdelement=v[c(3,6,9,12,15,18,21)]
 thirdelement
 
 
-#Challenge 2
+##Challenge 2
 
 m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 
@@ -45,7 +45,7 @@ x
 x=c(m[2,],m[,2:6],m[,9])
 x
 
-#Challenge 3
+##Challenge 3
 
 a <- array(data = 400:1, dim = c(5, 5, 4, 4))
 a
@@ -56,7 +56,7 @@ a[2,3,2,]
 
 a[1:5,1:5,3,3]
 
-#Challenge 4
+##Challenge 4
 
 
 x=list("Primates",list("Haplorhini",list("Anthropoidea",
@@ -68,10 +68,33 @@ x=list("Primates",list("Haplorhini",list("Anthropoidea",
 
 x
 
+Platyrrhini=list("Cebidae", "Atelidae", "Pitheciidae")
+Catarrhini=list("Cercopithecidae", "Hylobatidae", "Hominidae")
+Tarsioidea=list("Tarsiidae")
+Lorisoidea=list("Lorisidae", "Galagidae")
+Lemuroidea=list("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+
+Strepsirhini=list(Lorisoidea, Lemuroidea)
+names(Strepsirhini)=c("Lorisoidea", "Lemuroidea")
+Anthropoidea=list(Platyrrhini, Catarrhini)
+names(Anthropoidea)=c("Platyrrhini", "Catarrhini")
+Haplorhini=list(Anthropoidea, Tarsioidea)
+names(Haplorhini)=c("Anthropoidea", "Tarsioidea")
+
+Primates=list(Haplorhini,Strepsirhini)
+names(Primates)=c("Haplorhini","Strepsirhini")
+
+Primates
+#use names function to give names to the things inside of the list that you made.... so that then it give you $ of each list...
+
+
+
 #Challenge 5
 
 matrix1=matrix(data=c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow = 5, ncol = 3, byrow=TRUE)
+
 df=data.frame(matrix1)
+
 df$X2=as.logical(df$X2)
 df$X3=as.factor(df$X3)
 df
