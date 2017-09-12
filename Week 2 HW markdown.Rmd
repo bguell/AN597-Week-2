@@ -99,3 +99,5 @@ df$X2=as.logical(df$X2)
 df$X3=as.factor(df$X3)
 df
 str(df)
+
+hello
